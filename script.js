@@ -1,4 +1,4 @@
-const URL_SCRIPT = "COLE_AQUI_A_URL_DO_WEB_APP";
+const URL_SCRIPT = "1UJ8hSAotsDUqodT__LE4tU7vB-o3hVvhOI3loUFgOOQ";
 
 function salvar() {
   const dados = {
@@ -31,3 +31,4 @@ function salvar() {
     document.getElementById("codigo").focus();
   });
 }
+
