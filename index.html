@@ -42,7 +42,26 @@
     </div>
   </div>
 
-  <button onclick="salvar()">Salvar Medição</button>
+  <form id="formMedicao"
+      action="https://script.google.com/macros/s/AKfycbxS0RR3C7YZoLEYI3cu7tFmmnET2CYnrLcVq91_Wl7yMNFlrV9Njpc9m1WDjdZTkODF/exec"
+      method="POST"
+      target="hiddenFrame"
+      onsubmit="aposEnviar()">
+
+  <input type="hidden" name="responsavel" id="f_responsavel">
+  <input type="hidden" name="nf" id="f_nf">
+  <input type="hidden" name="codigo" id="f_codigo">
+  <input type="hidden" name="tamanho" id="f_tamanho">
+  <input type="hidden" name="altura" id="f_altura">
+  <input type="hidden" name="largura" id="f_largura">
+
+  <button type="submit">Salvar Medição</button>
+</form>
+
+<iframe name="hiddenFrame" style="display:none;"></iframe>
+
+<p id="mensagem"></p>
+
 
   <p id="mensagem"></p>
 
@@ -51,3 +70,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
