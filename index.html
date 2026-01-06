@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Medição de Produtos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+
+  <h2>Auditoria de Medidas</h2>
+
+  <!-- BLOCO FIXO DA NOTA -->
+  <div class="bloco">
+    <label>Responsável</label>
+    <input type="text" id="responsavel" placeholder="Nome do auditor">
+
+    <label>NF / Lote</label>
+    <input type="text" id="nf" placeholder="Número da nota">
+  </div>
+
+  <!-- BLOCO SKU -->
+  <div class="bloco sku">
+    <label>Código (SKU)</label>
+    <input type="text" id="codigo" autofocus>
+
+    <label>Tamanho</label>
+    <input type="text" id="tamanho" placeholder="001, 002, 003...">
+
+    <div class="linha">
+      <div>
+        <label>Altura (cm)</label>
+        <input type="number" id="altura">
+      </div>
+
+      <div>
+        <label>Largura (cm)</label>
+        <input type="number" id="largura">
+      </div>
+    </div>
+  </div>
+
+  <button onclick="salvar()">Salvar Medição</button>
+
+  <p id="mensagem"></p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
