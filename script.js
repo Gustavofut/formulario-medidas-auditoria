@@ -1,4 +1,4 @@
-const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbxKdBzhphE8AekdIS-Mmfz7VI67SZOrjgGOEaQgHOO511LSuAvoYIOEh5Gzedhi3mA2/exec";
+const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbyN-Jk-UlY9pLQDugYLpD8vMgpXQupT7joTzKRWFR85M94wvDQ5clyRwMNHHzRkkj4n/exec";
 
 function salvar() {
   const dados = {
@@ -31,6 +31,7 @@ function salvar() {
     document.getElementById("codigo").focus();
   });
 }
+
 
 
 
