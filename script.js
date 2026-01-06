@@ -15,10 +15,37 @@ function salvar() {
     return;
   }
 
+ function salvar() {
+
+  const params = new URLSearchParams();
+  params.append("responsavel", document.getElementById("responsavel").value);
+  params.append("nf", document.getElementById("nf").value);
+  params.append("codigo", document.getElementById("codigo").value);
+  params.append("tamanho", document.getElementById("tamanho").value);
+  params.append("altura", document.getElementById("altura").value);
+  params.append("largura", document.getElementById("largura").value);
+
   fetch(URL_SCRIPT, {
     method: "POST",
-    body: JSON.stringify(dados)
+    body: params
   })
+  .then(res => res.text())
+  .then(msg => {
+    document.getElementById("mensagem").innerText = msg;
+
+    // limpa só os campos do SKU
+    document.getElementById("codigo").value = "";
+    document.getElementById("tamanho").value = "";
+    document.getElementById("altura").value = "";
+    document.getElementById("largura").value = "";
+    document.getElementById("codigo").focus();
+  })
+  .catch(err => {
+    alert("Erro ao enviar");
+    console.error(err);
+  });
+}
+
   .then(res => res.text())
   .then(msg => {
     document.getElementById("mensagem").innerText = msg;
@@ -31,6 +58,7 @@ function salvar() {
     document.getElementById("codigo").focus();
   });
 }
+
 
 
 
