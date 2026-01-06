@@ -25,10 +25,37 @@ function salvar() {
   params.append("altura", document.getElementById("altura").value);
   params.append("largura", document.getElementById("largura").value);
 
-  fetch(URL_SCRIPT, {
-    method: "POST",
-    body: params
-  })
+ function aposEnviar() {
+
+  document.getElementById("f_responsavel").value =
+    document.getElementById("responsavel").value;
+
+  document.getElementById("f_nf").value =
+    document.getElementById("nf").value;
+
+  document.getElementById("f_codigo").value =
+    document.getElementById("codigo").value;
+
+  document.getElementById("f_tamanho").value =
+    document.getElementById("tamanho").value;
+
+  document.getElementById("f_altura").value =
+    document.getElementById("altura").value;
+
+  document.getElementById("f_largura").value =
+    document.getElementById("largura").value;
+
+  document.getElementById("mensagem").innerText =
+    "Medição enviada com sucesso";
+
+  // limpa só SKU
+  document.getElementById("codigo").value = "";
+  document.getElementById("tamanho").value = "";
+  document.getElementById("altura").value = "";
+  document.getElementById("largura").value = "";
+  document.getElementById("codigo").focus();
+}
+
   .then(res => res.text())
   .then(msg => {
     document.getElementById("mensagem").innerText = msg;
@@ -58,6 +85,7 @@ function salvar() {
     document.getElementById("codigo").focus();
   });
 }
+
 
 
 
